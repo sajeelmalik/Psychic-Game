@@ -1,5 +1,30 @@
-/*  body{
-    background-image: url("../images/psych.jpg");
-    background-repeat: repeat;
-    /* background-position: ; 
-}  */
+body, html{
+    height: 100%;
+    margin: 0;
+    /* background-position: ; */
+}
+.bg{
+    background-image: url("../images/mewtwo.png");
+    background-repeat: no-repeat; 
+    height: 100%;
+    /* opacity: 0.85; */
+    background-size: cover;
+}
+h1{
+    background-color: rgb(246, 225, 247);
+    text-align: center;
+    opacity: 0.8;
+    color: blueviolet;
+    padding-bottom: 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 46px;
+}
+h3{
+    font-family: 'Do Hyeon', sans-serif;
+    color: rgb(246, 225, 247);
+
+}
+h5, p{
+    font-family: 'Sunflower', sans-serif;
+    color: rgb(246, 225, 247);
+}

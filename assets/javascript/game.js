@@ -29,34 +29,39 @@ document.onkeyup = function(event){
             guesses = [];
             computerLetter = computerGuess(alphabet);
         }
-
-        
         
         document.onkeyup = function(event){
             guess = event.key.toLowerCase();
-            guesses.push(guess);  
-            // guesses.join(" ");
-            guessesLeft--;
+            if(alphabet.indexOf(guess) > -1)
+            {
+                guesses.push(guess);  
+                // guesses.join(" ");
+                guessesLeft--;
 
-            //minor test case to view the console's interpretation of computerGuess
-            console.log(computerLetter);
+                //minor test case to view the console's interpretation of computerGuess
+                console.log(computerLetter);
 
-            if(guess === computerLetter){
-                wins++;
-                scoreUpdate();
-                restart();
+                if(guess === computerLetter){
+                    console.log("You WIN!!!");
+                    wins++;
+                    scoreUpdate();
+                    restart();
 
-            }
-            else if(guessesLeft === 0){
-                console.log("You're a fraud!");
-                losses++;
-                scoreUpdate();
-                alert("The computer's guess was " + computerLetter + "!");
-                restart();
-                
+                }
+                else if(guessesLeft === 0){
+                    console.log("You're a fraud!");
+                    losses++;
+                    scoreUpdate();
+                    alert("The computer's guess was " + computerLetter + "!");
+                    restart();
+                    
+                }
+                else{
+                    scoreUpdate();
+                }
             }
             else{
-                scoreUpdate();
+                alert("Type a letter to play the game!");
             }
         };
         
