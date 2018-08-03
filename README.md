@@ -2,7 +2,7 @@
 
 Compete against Mewtwo and determine who is the greater psychic!
 
-* Carefully attempt to guess the letter that Mewtwo has picked. You only have 7 guesses to beat him!.
+* Carefully attempt to guess the letter that Mewtwo has picked. You only have 7 guesses to beat him!
 * Powered by Bootstrap and Javascript
 
 ## Getting Started
@@ -17,7 +17,7 @@ Follow the deployed project link below to play the game!
 
 ### Image Preview of Psychic Game
 <!-- take a picture of the image and add it into the readme  -->
-![Psychic Game Preview](assets/images/preview.jpg "Mewtwo's Challenge - The Psychic Showdown")
+![Psychic Game Preview](https://raw.githubusercontent.com/sajeelmalik/Psychic-Game/master/assets/images/preview.JPG "Mewtwo's Challenge - The Psychic Showdown")
 
 ## Prerequisites
 
