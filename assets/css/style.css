@@ -20,11 +20,26 @@ h1{
     font-size: 46px;
 }
 h3{
+    margin-top: 20px;
     font-family: 'Do Hyeon', sans-serif;
-    color: rgb(246, 225, 247);
+    color: rgb(96, 39, 187);
 
 }
-h5, p{
+h4, p{
     font-family: 'Sunflower', sans-serif;
-    color: rgb(246, 225, 247);
+    color: rgb(96, 39, 187);
 }
+
+.start{
+    background-color: rgb(246, 225, 247);
+    border-radius: 25px;
+}
+
+.mewtwo{
+    margin-top: 25px;
+    padding-top: 10px;
+    background-color: rgb(246, 225, 247);
+    border-radius: 25px;
+    opacity: 0.8;
+}
+

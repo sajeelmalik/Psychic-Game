@@ -17,9 +17,9 @@ document.onkeyup = function(event){
         };
         var computerLetter = computerGuess(alphabet);
 
-        // Set the inner HTML contents of the #score div to our updated wins, losses, and guesses
+        // Set the inner HTML contents of the #score div to our updated wins, losses, and guesses. Guesses are separated with a comma and a space through .join()
         var scoreUpdate = function(){
-            var score = "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p> Guesses Left: " + guessesLeft + "<p> Your guesses: " + guesses + "</p>";
+            var score = "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p> Guesses Left: " + guessesLeft + "<p> Your guesses: " + guesses.join(", ") + "</p>";
             document.querySelector("#score").innerHTML = score;
         };
 
@@ -42,6 +42,7 @@ document.onkeyup = function(event){
                 console.log(computerLetter);
 
                 if(guess === computerLetter){
+                    alert("Maybe you ARE a psychic after all!");
                     console.log("You WIN!!!");
                     wins++;
                     scoreUpdate();
@@ -52,7 +53,7 @@ document.onkeyup = function(event){
                     console.log("You're a fraud!");
                     losses++;
                     scoreUpdate();
-                    alert("The computer's guess was " + computerLetter + "!");
+                    alert("YOU FRAUD! Mewtwo's guess was " + computerLetter + "!");
                     restart();
                     
                 }
@@ -60,6 +61,8 @@ document.onkeyup = function(event){
                     scoreUpdate();
                 }
             }
+
+            // alert user to stay within the bounds of the game
             else{
                 alert("Type a letter to play the game!");
             }
