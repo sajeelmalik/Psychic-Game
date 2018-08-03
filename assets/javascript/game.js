@@ -32,33 +32,43 @@ document.onkeyup = function(event){
         
         document.onkeyup = function(event){
             guess = event.key.toLowerCase();
+
+            // checks if key is a letter
             if(alphabet.indexOf(guess) > -1)
             {
-                guesses.push(guess);  
-                // guesses.join(" ");
-                guessesLeft--;
+                // checks if letter has already been guessed
+                if(guesses.indexOf(guess) === -1){
+                    guesses.push(guess);  
+                    // guesses.join(" ");
+                    guessesLeft--;
+                    document.querySelector("#message").innerHTML = "Still wrong! You might be an inferior being!";
 
-                //minor test case to view the console's interpretation of computerGuess
-                console.log(computerLetter);
+                    //minor test case to view the console's interpretation of computerGuess
+                    console.log(computerLetter);
 
-                if(guess === computerLetter){
-                    alert("Maybe you ARE a psychic after all!");
-                    console.log("You WIN!!!");
-                    wins++;
-                    scoreUpdate();
-                    restart();
+                    if(guess === computerLetter){
+                        document.querySelector("#message").innerHTML = "... WHAT!? How could you have known?!";
+                        alert("Maybe you ARE a psychic after all!");
+                        console.log("You WIN!!!");
+                        wins++;
+                        scoreUpdate();
+                        restart();
 
-                }
-                else if(guessesLeft === 0){
-                    console.log("You're a fraud!");
-                    losses++;
-                    scoreUpdate();
-                    alert("YOU FRAUD! Mewtwo's guess was " + computerLetter + "!");
-                    restart();
-                    
+                    }
+                    else if(guessesLeft === 0){
+                        console.log("You're a fraud!");
+                        losses++;
+                        scoreUpdate();
+                        alert("YOU FRAUD! Mewtwo's guess was " + computerLetter + "!");
+                        restart();
+                        
+                    }
+                    else{
+                        scoreUpdate();
+                    }
                 }
                 else{
-                    scoreUpdate();
+                    document.querySelector("#message").innerHTML = "You already picked that letter you buffoon!";
                 }
             }
 
