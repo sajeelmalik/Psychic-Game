@@ -8,7 +8,7 @@ var guesses = [];
 
 //start the game upon pressing any letter key
 document.onkeyup = function(event){
-    input = event.key.toLowerCase();
+    var input = event.key.toLowerCase();
     if(alphabet.includes(input)){
 
         //have the computer randomly guess any letter in the alphabet
@@ -19,7 +19,7 @@ document.onkeyup = function(event){
 
         // Set the inner HTML contents of the #score div to our updated wins, losses, and guesses. Guesses are separated with a comma and a space through .join()
         var scoreUpdate = function(){
-            var score = "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p> Guesses Left: " + guessesLeft + "<p> Your guesses: " + guesses.join(", ") + "</p>";
+            var score = "<p>Wins: <h4>" + wins + "</h4></p>" + "<p>Losses: <h4>" + losses + "</h4></p>" + "<p> Guesses Left: <h4>" + guessesLeft + "</h4><p> Your guesses: <h4>" + guesses.join(", ") + "</h4></p>";
             document.querySelector("#score").innerHTML = score;
         };
 

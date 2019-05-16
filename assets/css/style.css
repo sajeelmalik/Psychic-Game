@@ -4,7 +4,7 @@ body, html{
     /* background-position: ; */
 }
 .bg{
-    background-image: url("../images/mewtwo.png");
+    background-image: url("https://images2.alphacoders.com/754/thumb-1920-75420.jpg");
     background-repeat: no-repeat; 
     height: 100%;
     /* opacity: 0.85; */
@@ -12,12 +12,16 @@ body, html{
 }
 h1{
     background-color: rgb(246, 225, 247);
+    box-shadow: 0px 2px 4px rgb(202, 172, 230, 0.6);
     text-align: center;
-    opacity: 0.8;
+    /* opacity: 0.9; */
     color: blueviolet;
     padding-bottom: 10px;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 46px;
+
+    z-index: 4;
+    margin-bottom: 20px;
 }
 h3{
     margin-top: 20px;
@@ -32,15 +36,15 @@ h4, p{
 
 .start{
     background-color: rgb(246, 225, 247);
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .mewtwo{
     margin-top: 25px;
     padding-top: 10px;
     background-color: rgb(246, 225, 247);
-    border-radius: 25px;
-    opacity: 0.8;
+    border-radius: 10px;
+    opacity: 0.9;
 }
 
 #message{
