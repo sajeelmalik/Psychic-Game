@@ -48,7 +48,10 @@ document.onkeyup = function(event){
 
                     if(guess === computerLetter){
                         document.querySelector("#message").innerHTML = "... WHAT!? How could you have known?!";
-                        alert("Maybe you ARE a psychic after all!");
+                         
+                        var mewtwoResponse = "Maybe you ARE a psychic after all!";
+                        document.querySelector(".start").innerHTML += "<h4>" + mewtwoResponse + "</h4>";
+
                         console.log("You WIN!!!");
                         wins++;
                         scoreUpdate();
@@ -58,8 +61,12 @@ document.onkeyup = function(event){
                     else if(guessesLeft === 0){
                         console.log("You're a fraud!");
                         losses++;
+
+                        var mewtwoResponse = "YOU FRAUD! Mewtwo's guess was " + computerLetter + "!";
+                        document.querySelector(".start").innerHTML += "<h4>" + mewtwoResponse + "</h4>";
+
+
                         scoreUpdate();
-                        alert("YOU FRAUD! Mewtwo's guess was " + computerLetter + "!");
                         restart();
                         
                     }
